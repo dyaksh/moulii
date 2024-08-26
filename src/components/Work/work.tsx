@@ -44,7 +44,7 @@ const WorkPage = () => {
   return (
     <>
       <div className="container py-12">
-        <h1 className="text-4xl font-bold mb-8 text-[#9400d3]">Our Work</h1> {/* Updated color */}
+        {/* Updated color */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {workCategories.map((category) => (
             <Link
