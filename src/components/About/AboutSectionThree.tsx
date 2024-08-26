@@ -36,8 +36,8 @@ const AboutSectionThree = () => {
             <Image
               src="/images/team/arvind-sir.png"
               alt="Arvind H Mittal"
-              width={250} // Adjust the width as needed
-              height={250} // Adjust the height as needed
+              width={300} // Adjust the width as needed
+              height={300} // Adjust the height as needed
               className="img-fluid"
             />
           </div>
