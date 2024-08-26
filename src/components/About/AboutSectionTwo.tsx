@@ -15,7 +15,7 @@ const AboutSectionTwo = () => {
             <h3 className="mb-3 text-xl font-bold" style={{ color: primaryColor }}>
               Innovative Campaigns
             </h3>
-            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed" style={{ textAlign: 'justify' }}>
               At Moulis Advertising, we craft innovative and impactful media campaigns that resonate with audiences. Our approach ensures that every campaign is tailored to maximize engagement and drive results.
             </p>
           </div>
@@ -27,7 +27,7 @@ const AboutSectionTwo = () => {
             <h3 className="mb-3 text-xl font-bold" style={{ color: primaryColor }}>
               Comprehensive Media Strategies
             </h3>
-            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed" style={{ textAlign: 'justify' }}>
               We offer comprehensive media strategies that integrate Print Media, Digital Media, TV Commercials, OOH Advertising, Exhibitions, Music Shows, Cultural Events, and Audio solutions to ensure your brand&apos;s message is effectively communicated across all channels.
             </p>
           </div>
@@ -39,7 +39,7 @@ const AboutSectionTwo = () => {
             <h3 className="mb-3 text-xl font-bold" style={{ color: primaryColor }}>
               Client-Centric Approach
             </h3>
-            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+            <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed" style={{ textAlign: 'justify' }}>
               Our client-centric approach prioritizes your needs and goals, ensuring that every project is executed with precision and excellence. We are committed to delivering outstanding support and service throughout your advertising journey.
             </p>
           </div>

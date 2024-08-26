@@ -28,7 +28,11 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Innovative Media Advertising Solutions"
-                paragraph="At Mouli's, we excel in delivering creative and impactful media advertising solutions across various platforms. Our expertise encompasses Print Media, Digital Media, TV Commercials & Documentaries, Out-Of-Home (OOH) advertising, Exhibitions, Music Shows & Cultural Events, and Audio content. We are committed to crafting compelling messages that captivate audiences and drive engagement."
+                paragraph={
+                  <p style={{ textAlign: 'justify' }}>
+                    At Mouli's, we excel in delivering creative and impactful media advertising solutions across various platforms. Our expertise encompasses Print Media, Digital Media, TV Commercials & Documentaries, Out-Of-Home (OOH) advertising, Exhibitions, Music Shows & Cultural Events, and Audio content. We are committed to crafting compelling messages that captivate audiences and drive engagement.
+                  </p>
+                }
                 mb="44px"
               />
               <div className="mb-12 max-w-[570px] lg:mb-0" data-wow-delay=".15s">

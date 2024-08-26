@@ -1,11 +1,10 @@
+import React from 'react';
 import Image from "next/image";
 
 // Define primary color here
 const primaryColor = '#9400d3';
 
 // Define team member data
-// src/components/team/teamData.ts
-
 export const teamMembers = [
   {
     image: "/images/team/arvind-sir.png",
@@ -47,7 +46,7 @@ export const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <section id="team" className="pt-16 md:pt-20 lg:pt-28">
+    <section id="team" className="pt-16 md:pt-20 lg:pt-28 bg-white dark:bg-gray-900">
       <div className="container mx-auto">
         {teamMembers.map((member, index) => (
           <div key={index} className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
@@ -57,16 +56,17 @@ const TeamSection = () => {
                 alt={member.name}
                 width={250} // Adjust the width as needed
                 height={250} // Adjust the height as needed
+                className="rounded-full"
               />
             </div>
             <div className="lg:w-1/2 flex flex-col justify-center text-center lg:text-left px-4 lg:px-0">
-              <h3 className="text-4xl font-bold mb-4" >
+              <h3 className="text-4xl font-bold mb-4" style={{ color: primaryColor }}>
                 {member.name}
               </h3>
               <h4 className="text-2xl font-semibold mb-4" style={{ color: primaryColor }}>
                 {member.position}
               </h4>
-              <blockquote className="italic text-base lg:text-lg mb-4">
+              <blockquote className="italic text-base lg:text-lg mb-4 text-justify">
                 {member.quote || member.text}
               </blockquote>
             </div>
