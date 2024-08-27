@@ -24,7 +24,8 @@ const Header = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
-  });
+    return () => window.removeEventListener("scroll", handleStickyNavbar);
+  }, []);
 
   // Submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -32,14 +33,11 @@ const Header = () => {
     setOpenIndex(openIndex === index ? -1 : index);
   };
 
-<<<<<<< HEAD
-=======
   // Close menu when a link is clicked
   const closeMenuOnClick = () => {
     setNavbarOpen(false);
   };
 
->>>>>>> ccbd5ea (Initial commit or any relevant message)
   const usePathName = usePathname();
 
   return (
@@ -58,7 +56,7 @@ const Header = () => {
                 href="/"
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
-                } `}
+                }`}
               >
                 <Image
                   src="/images/logo/image.png"
@@ -82,25 +80,21 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-<<<<<<< HEAD
                   className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-4 py-[8px] ring-primary focus:ring-2 lg:hidden"
-=======
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-4 py-[8px] ring-primary  lg:hidden"
->>>>>>> ccbd5ea (Initial commit or any relevant message)
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[7px] rotate-45" : " "
+                      navbarOpen ? " top-[7px] rotate-45" : ""
                     }`}
                   />
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? "opacity-0 " : " "
+                      navbarOpen ? "opacity-0" : ""
                     }`}
                   />
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                      navbarOpen ? " top-[-8px] -rotate-45" : " "
+                      navbarOpen ? " top-[-8px] -rotate-45" : ""
                     }`}
                   />
                 </button>
@@ -123,10 +117,7 @@ const Header = () => {
                                 ? "text-[#9400d3] dark:text-[#9400d3]"
                                 : "text-dark hover:text-[#9400d3] dark:text-white/70 dark:hover:text-[#9400d3]"
                             }`}
-<<<<<<< HEAD
-=======
                             onClick={closeMenuOnClick}
->>>>>>> ccbd5ea (Initial commit or any relevant message)
                           >
                             {menuItem.title}
                           </Link>
@@ -142,47 +133,37 @@ const Header = () => {
                                   <path
                                     fillRule="evenodd"
                                     clipRule="evenodd"
-                                    d="M6.29289 8.8427C6.68342 8.45217 7.31658 8.45217 7.70711 8.8427L12 13.1356L16.2929 8.8427C16.6834 8.45217 17.3166 8.45217 17.7071 8.8427C18.0976 9.23322 18.0976 9.86639 17.7071 10.2569L12 15.964L6.29289 10.2569C5.90237 9.86639 5.90237 9.23322 6.29289 8.8427Z"
+                                    d="M6.29289 8.8427C6.68342 8.45217 7.31658 8.45217 7.70711 8.8427L12 13.1356L16.2929 8.8427C16.6834 8.45217 17.3166 8.45217 17.7071 8.8427C18.0976 9.23323 18.0976 9.86639 17.7071 10.2569L12.7071 15.2569C12.3166 15.6474 11.6834 15.6474 11.2929 15.2569L6.29289 10.2569C5.90237 9.86639 5.90237 9.23323 6.29289 8.8427Z"
                                     fill="currentColor"
                                   />
                                 </svg>
                               </span>
                             </p>
-                            <div
-                              className={`submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                            <ul
+                              className={`submenu absolute left-0 z-10 w-full rounded border border-body-color bg-white text-base shadow-lg dark:border-body-color/20 dark:bg-dark ${
                                 openIndex === index ? "block" : "hidden"
                               }`}
                             >
-                              {menuItem.submenu &&
-                                menuItem.submenu.map((submenuItem, subIndex) => (
+                              {menuItem.submenu?.map((submenuItem, submenuIndex) => (
+                                <li key={submenuIndex}>
                                   <Link
                                     href={submenuItem.path}
-                                    key={subIndex}
-                                    className="block rounded py-[10px] text-sm text-body-color hover:text-[#9400d3] dark:text-white dark:hover:text-[#9400d3]"
-<<<<<<< HEAD
-=======
+                                    className="block py-3 px-5 text-dark hover:bg-body-color hover:text-[#9400d3] dark:text-white dark:hover:bg-dark"
                                     onClick={closeMenuOnClick}
->>>>>>> ccbd5ea (Initial commit or any relevant message)
                                   >
                                     {submenuItem.title}
                                   </Link>
-                                ))}
-                            </div>
+                                </li>
+                              ))}
+                            </ul>
                           </>
                         )}
                       </li>
                     ))}
-                    {/* Add ThemeToggler inside the nav for mobile view */}
-                    <li className="mt-4 lg:hidden">
-                      <ThemeToggler />
-                    </li>
                   </ul>
                 </nav>
               </div>
-              {/* Theme toggler visible on desktop */}
-              <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
-                <ThemeToggler />
-              </div>
+              <ThemeToggler />
             </div>
           </div>
         </div>
