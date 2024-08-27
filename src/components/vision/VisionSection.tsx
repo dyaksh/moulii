@@ -20,7 +20,7 @@ const VisionSection = () => {
                 Our Vision
               </h3>
               <p className="text-base lg:text-lg text-justify text-gray-800 dark:text-gray-300">
-                Through constant research and application of innovative solutions, we will do all it takes to be India's premier full-service advertising agency that delivers results for our clients. At the heart of everything we do is a set of shared values that serve as the basis for the decisions we make and the actions we take to create impact for our clients. The espoused values that drive our success include Clarity, Individuality, Creativity, Quality, and Accountability.
+                Through constant research and application of innovative solutions, we will do all it takes to be India&apos;s premier full-service advertising agency that delivers results for our clients. At the heart of everything we do is a set of shared values that serve as the basis for the decisions we make and the actions we take to create impact for our clients. The espoused values that drive our success include Clarity, Individuality, Creativity, Quality, and Accountability.
               </p>
             </div>
           </div>
