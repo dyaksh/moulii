@@ -9,6 +9,7 @@ const VisionSection = () => {
     <section id="Vision" className="overflow-hidden py-16 md:py-20 lg:py-28 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Vision Section */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12">
           <div className="lg:w-1/2 flex flex-col justify-center text-center lg:text-left mb-4 lg:mb-0">
@@ -17,6 +18,8 @@ const VisionSection = () => {
               Through constant research and application of innovative solutions, we will do all it takes to be India&apos;s premier full-service advertising agency that delivers results for our clients. At the heart of everything we do is a set of shared values that serve as the basis for the decisions we make and the actions we take to create impact for our clients. The espoused values that drive our success include Clarity, Individuality, Creativity, Quality, and Accountability.
             </p>
 =======
+=======
+>>>>>>> ccbd5ea (Initial commit or any relevant message)
         <div className="flex flex-wrap justify-center -mx-4">
           <div className="w-full px-4 lg:w-1/2">
             <div
@@ -32,7 +35,10 @@ const VisionSection = () => {
                 Through constant research and application of innovative solutions, we will do all it takes to be India&apos;s premier full-service advertising agency that delivers results for our clients. At the heart of everything we do is a set of shared values that serve as the basis for the decisions we make and the actions we take to create impact for our clients. The espoused values that drive our success include Clarity, Individuality, Creativity, Quality, and Accountability.
               </p>
             </div>
+<<<<<<< HEAD
 >>>>>>> 8b9e3ce9b07984255d686b58d4a010cb54c56220
+=======
+>>>>>>> ccbd5ea (Initial commit or any relevant message)
           </div>
           <div className="w-full px-4 lg:w-1/2 flex flex-wrap justify-center">
             <div className="flex items-center justify-center">

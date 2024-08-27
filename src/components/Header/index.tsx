@@ -32,6 +32,14 @@ const Header = () => {
     setOpenIndex(openIndex === index ? -1 : index);
   };
 
+<<<<<<< HEAD
+=======
+  // Close menu when a link is clicked
+  const closeMenuOnClick = () => {
+    setNavbarOpen(false);
+  };
+
+>>>>>>> ccbd5ea (Initial commit or any relevant message)
   const usePathName = usePathname();
 
   return (
@@ -74,7 +82,11 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
+<<<<<<< HEAD
                   className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-4 py-[8px] ring-primary focus:ring-2 lg:hidden"
+=======
+                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-4 py-[8px] ring-primary  lg:hidden"
+>>>>>>> ccbd5ea (Initial commit or any relevant message)
                 >
                   <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
@@ -111,6 +123,10 @@ const Header = () => {
                                 ? "text-[#9400d3] dark:text-[#9400d3]"
                                 : "text-dark hover:text-[#9400d3] dark:text-white/70 dark:hover:text-[#9400d3]"
                             }`}
+<<<<<<< HEAD
+=======
+                            onClick={closeMenuOnClick}
+>>>>>>> ccbd5ea (Initial commit or any relevant message)
                           >
                             {menuItem.title}
                           </Link>
@@ -143,6 +159,10 @@ const Header = () => {
                                     href={submenuItem.path}
                                     key={subIndex}
                                     className="block rounded py-[10px] text-sm text-body-color hover:text-[#9400d3] dark:text-white dark:hover:text-[#9400d3]"
+<<<<<<< HEAD
+=======
+                                    onClick={closeMenuOnClick}
+>>>>>>> ccbd5ea (Initial commit or any relevant message)
                                   >
                                     {submenuItem.title}
                                   </Link>
